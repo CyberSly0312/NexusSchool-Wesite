@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Couleurs de marque par défaut, au format "R G B" (utilisé par Tailwind via
+   rgb(var(--color-x) / <alpha>)). Remplacées à l'exécution par la page
+   /admin — voir src/context/SiteConfigContext.jsx. */
+:root {
+  --color-blue-deep: 15 42 92;     /* #0F2A5C */
+  --color-blue: 42 92 219;         /* #2A5CDB */
+  --color-blue-bright: 61 107 255; /* #3D6BFF */
+  --color-amber: 226 163 59;       /* #E2A33B */
+  --color-teal: 44 158 143;        /* #2C9E8F */
+  --color-clay: 193 72 58;         /* #C1483A */
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body {
+  @apply bg-paper text-ink font-body antialiased;
+  font-feature-settings: "ss01" on, "ss02" on;
+}
+
+::selection {
+  background: #2A5CDB;
+  color: white;
+}
+
+:focus-visible {
+  outline: 2px solid #2A5CDB;
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+.container-nexus {
+  @apply max-w-[1240px] mx-auto px-6 md:px-10;
+}
+
+.eyebrow {
+  @apply font-mono text-xs tracking-[0.18em] uppercase text-blue;
+}
+
+.glass {
+  background: rgba(255,255,255,0.72);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255,255,255,0.6);
+}
+
+.grain {
+  background-image: radial-gradient(rgba(10,15,30,0.05) 1px, transparent 1px);
+  background-size: 22px 22px;
+}
+
+.bg-hero-radial {
+  background:
+    radial-gradient(60% 50% at 78% 8%, rgba(61,107,255,0.14) 0%, rgba(61,107,255,0) 60%),
+    radial-gradient(40% 40% at 8% 92%, rgba(226,163,59,0.12) 0%, rgba(226,163,59,0) 60%);
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+.input-field {
+  @apply w-full rounded-lg border border-ink/10 bg-paper px-4 py-3 text-[14.5px] text-ink placeholder:text-ink-muted/60 focus:border-blue focus:bg-white transition-colors outline-none;
+}
