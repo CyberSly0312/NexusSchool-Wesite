@@ -1,0 +1,17 @@
+{
+  "logo": null,
+  "colors": {
+    "blueDeep": "#0F2A5C",
+    "blue": "#2A5CDB",
+    "blueBright": "#3D6BFF",
+    "amber": "#E2A33B",
+    "teal": "#2C9E8F",
+    "clay": "#C1483A"
+  },
+  "socialLinks": [
+    { "id": "mail", "label": "Email", "icon": "Mail", "url": "" },
+    { "id": "chat", "label": "WhatsApp", "icon": "MessageCircle", "url": "" },
+    { "id": "social1", "label": "Facebook", "icon": "Share2", "url": "" },
+    { "id": "social2", "label": "Instagram", "icon": "Camera", "url": "" }
+  ]
+}
